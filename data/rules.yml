@@ -1,0 +1,13 @@
+version: "2.0"
+
+rules:
+
+- rule: auto
+  steps:
+  - intent: tanya
+  - action: utter_tanya
+
+- rule: test
+  steps:
+  - intent: test
+  - action: test_action

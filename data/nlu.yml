@@ -1,0 +1,625 @@
+version: "2.0"
+
+nlu:
+
+- regex: nama
+  examples: |
+    - ([a-zA-Z]\s?)+
+
+- intent: greet
+  examples: |
+    - hey
+    - hei
+    - hello
+    - halo
+    - hai
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - bot ya?
+    - manusia bukan?
+    - ini bot ya?
+    - ini manusia bukan?
+
+- intent: jawabnama
+  examples: |
+   - Nama saya [Irvan](nama).
+   - Nama saya [khalif](nama).
+   - Nama saya [vsgtsd](nama).
+   - Nama saya [dsvfeb](nama).
+   - Nama saya [arewvtg](nama).
+   - Nama saya [naufal](nama).
+   - Nama saya [dsntes](nama).
+   - [Azka](nama).
+   - [sdghnry](nama).
+   - [gerald](nama).
+   - [avfwbh](nama).
+   - [sdnset](nama).
+   - [angga](nama).
+   - [brsgsed](nama).
+   - Saya [Agung](nama).
+   - Saya [dsgnmjm](nama).
+   - Saya [iqbal](nama).
+   - Saya [wemtkswe](nama).
+   - Saya [Aggmdhedung](nama).
+   - Saya [daffa](nama).
+   - Saya [hmdem](nama).
+   - [Zananda](nama) adalah nama saya.
+   - [dstbb](nama) adalah nama saya.
+   - [gnegne](nama) adalah nama saya.
+   - [dtnea](nama) adalah nama saya.
+   - [faqih](nama) adalah nama saya.
+   - [tqmgdslk](nama) adalah nama saya.
+   - [lalang](nama) adalah nama saya.
+   - Namaku [Dimas](nama).
+   - Namaku [afit](nama).
+   - Namaku [acsnmdoiu](nama).
+   - Namaku [aasbrn](nama).
+   - Namaku [fathan](nama).
+   - Namaku [acwnmi](nama).
+   - Namaku [anatg](nama).
+   - Aku [Abdul](nama).
+   - Aku [fitra](nama).
+   - Aku [royan](nama).
+   - Aku [vwertgb](nama).
+   - Aku [sdfbh](nama).
+   - Aku [bwrytnmm](nama).
+   - Aku [vrwmh](nama).
+   - Nama : [Josie](nama).
+   - Nama : [asdf](nama).
+   - Nama : [Josbnsie](nama).
+   - Nama : [wtnza](nama).
+   - Nama : [ferza](nama).
+   - Nama : [farras](nama).
+   - Nama : [qiopjur](nama).
+
+- intent: jelaskan
+  examples: |
+    - Tolong jelaskan soal tugas akhir
+
+- intent: tanya/tugasakhir
+  examples: |
+    - Apa kegiatan akademik pada akhir program diploma?
+    - Di akhir program diploma ngapain?
+    - Akhir kuliah ada tugas?
+    - Gimana cara lulus?
+    - Bagaimana lulus dari unsri?
+    - Apa ada yang harus dikerjakan di akhir program diploma?
+    - Mau lulus gimana caranya?
+    - Bagaimana supaya bisa wisuda?
+    - Apa syarat wisuda?
+    - Gimana sih lulus dari unsri?
+
+- intent: tanya/alasantugasakhir
+  examples: |
+    - Kenapa tugas akhir?
+    - Mengapa harus tugas akhir?
+    - Kenapa ada tugas akhir?
+    - Haruskah tugas akhir?
+    - Kenapa harus tugas akhir?
+    - Apa tujuan tugas akhir?
+    - Apa alasan tugas akhir wajib?
+    - Apa faedah tugas akhir?
+    - Tugas akhir ada gunanya?
+    - Keuntungan tugas akhir?
+
+- intent: tanya/magang
+  examples: |
+    - Bagaimana cara magang?
+    - Magang gimana sih?
+    - Bagaimana cara magang?
+    - Cara magang gimana?
+    - Apa saja langkah magang?
+    - Mau magang gimana?
+    - Gimana mau magang?
+    - Cara magang?
+    - Kalau mau magang gimana caranya?
+    - Magang itu gimana caranya?
+
+- intent: tanya/lamamagang
+  examples: |
+    - Magang berapa lama?
+    - Magang itu seberapa lama?
+    - Magang makan waktu lama kah?
+    - Magang lama gak?
+    - Magang sebentar kah?
+    - Berapa lama saya harus magang?
+    - Berapa lama magang ditentukan oleh unsri?
+    - Berapakah lama magang?
+    - Saya perlu magang berapa lama?
+    - Apa ada ketentuan lama magang dari unsri?
+    - Mahasiswa unsri magang berapa bulan?
+
+- intent: tanya/kkntematik
+  examples: |
+    - Dimana tempat dilaksanakan KKN Tematik?
+    - Kalau mau KKN Tematik dimana?
+    - Tempat KKN Tematik dimana?
+    - Nanti KKN Tematik dilaksanakan dimana?
+    - Ntar KKN Tematik dimana?
+    - KKN Tematik dimana?
+    - Dimana tempat KKN Tematik?
+    - KKN Tematik ntar dimana?
+    - Tempat KKN Tematik nanti dimana?
+    - Tempat pelaksanaan KKN Tematik dimana?
+
+- intent: tanya/skskm
+  examples: |
+    - Bagaimana bobot sks dalam magang kampus merdeka?
+    - Sks sewaktu magang kampus merdeka bagaimana?
+    - Bagaimana sks saat magang kampus merdeka?
+    - Sewaktu magang kampus merdeka sks saya gimana?
+    - Sks pas magang kampus merdeka bagaimana?
+    - Bagaimana sks saya saat magang kampus merdeka?
+    - Sks saya pas magang kampus merdeka gimana?
+    - Masalah sks bagaimana saat saya magang kampus merdeka?
+    - Saat saya magang kampus merdeka bagaimana dengan sks saya?
+    - Pas magang kampus merdeka sks saya ntar gimana?
+
+- intent: tanya/tugasakhirmagister
+  examples: |
+    - Apa tugas akhir program magister?
+    - Apa kegiatan akademik pada akhir program magister?
+    - Bagaimana lulus dari program magister?
+    - Apa yang harus dilakukan agar lulus dari program magister?
+    - Gimana lulus dari program magister?
+    - Harus ngapain untuk lulus dari program magister?
+    - Apakah ada skripsi untuk program magister?
+    - Program magister apakah ada skripsi?
+    - Apakah ada tugas akhir untuk program magister?
+    - Tugas akhir magister
+    - Program magister ada skripsi gak?
+    - Program magister perlu nyusun skripsi?
+    - Apa tugas akhir S2?
+    - Apa kegiatan akademik pada akhir S2?
+    - Bagaimana lulus S2?
+    - Apa yang harus dilakukan agar lulus S2?
+    - Gimana lulus S2?
+    - Harus ngapain untuk lulus S2?
+    - Apakah ada skripsi untuk S2?
+    - S2 apakah ada skripsi?
+    - Apakah ada tugas akhir untuk S2?
+    - Tugas akhir S2
+    - S2 ada skripsi gak?
+    - S2 perlu nyusun skripsi?
+
+- intent: tanya/tugasakhirdoktor
+  examples: |
+    - Apa tugas akhir program doktor?
+    - Apa kegiatan akademik pada akhir program doktor?
+    - Bagaimana lulus dari program doktor?
+    - Apa yang harus dilakukan agar lulus dari program doktor?
+    - Gimana lulus dari program doktor?
+    - Harus ngapain untuk lulus dari program doktor?
+    - Apakah ada skripsi untuk program doktor?
+    - Program doktor apakah ada skripsi?
+    - Apakah ada tugas akhir untuk program doktor?
+    - Tugas akhir doktor
+    - Program doktor ada skripsi gak?
+    - Program doktor perlu nyusun skripsi?
+    - Apa tugas akhir S3?
+    - Apa kegiatan akademik pada akhir S3?
+    - Bagaimana lulus S3?
+    - Apa yang harus dilakukan agar lulus S3?
+    - Gimana lulus S3?
+    - Harus ngapain untuk lulus S3?
+    - Apakah ada skripsi untuk S3?
+    - S3 apakah ada skripsi?
+    - Apakah ada tugas akhir untuk S3?
+    - Tugas akhir S3
+    - S3 ada skripsi gak?
+    - S3 perlu nyusun skripsi?
+
+- intent: tanya/luaranskripsi
+  examples: |
+    - Bagaimana luaran dan laporan skripsi Universitas Sriwijaya?
+    - Apa luaran skripsi Universitas Sriwijaya?
+    - Apa keluaran skripsi Universitas Sriwijaya?
+    - Apa output skripsi Universitas Sriwijaya?
+    - Luaran skripsi
+    - Output skripsi
+    - Bagaimana luaran minimal skripsi?
+    - Bagaimana luaran prestasi skripsi?
+    - Bagaimana output minimal skripsi?
+    - Bagaimana output prestasi skripsi?
+    - Luaran minimal dan luaran prestasi skripsi
+    - Luaran skripsi diunggah ke mana?
+    - Luaran skripsi diupload ke mana?
+    - Output skripsi diupload ke mana?
+    - skripsi apa perlu dipublikasikan?
+    - Perlukah skripsi dipublikasikan?
+    - Keluaran skripsi kayak gimana?
+    - Output skripsi kayak gimana?
+    - Gimana luaran skripsi?
+    - Gimana output skripsi?
+
+- intent: tanya/luarantesis
+  examples: |
+    - Bagaimana luaran dan laporan tesis Universitas Sriwijaya?
+    - Apa luaran tesis Universitas Sriwijaya?
+    - Apa keluaran tesis Universitas Sriwijaya?
+    - Apa output tesis Universitas Sriwijaya?
+    - Luaran tesis
+    - Output tesis
+    - Bagaimana luaran minimal tesis?
+    - Bagaimana luaran prestasi tesis?
+    - Bagaimana output minimal tesis?
+    - Bagaimana output prestasi tesis?
+    - Luaran minimal dan luaran prestasi tesis
+    - Luaran tesis diunggah ke mana?
+    - Luaran tesis diupload ke mana?
+    - Output tesis diupload ke mana?
+    - tesis apa perlu dipublikasikan?
+    - Perlukah tesis dipublikasikan?
+    - Keluaran tesis kayak gimana?
+    - Output tesis kayak gimana?
+    - Gimana luaran tesis?
+    - Gimana output tesis?
+
+- intent: tanya/luarandisertasi
+  examples: |
+    - Bagaimana luaran dan laporan disertasi Universitas Sriwijaya?
+    - Apa luaran disertasi Universitas Sriwijaya?
+    - Apa keluaran disertasi Universitas Sriwijaya?
+    - Apa output disertasi Universitas Sriwijaya?
+    - Luaran disertasi
+    - Output disertasi
+    - Bagaimana luaran minimal disertasi?
+    - Bagaimana luaran prestasi disertasi?
+    - Bagaimana output minimal disertasi?
+    - Bagaimana output prestasi disertasi?
+    - Luaran minimal dan luaran prestasi disertasi
+    - Luaran disertasi diunggah ke mana?
+    - Luaran disertasi diupload ke mana?
+    - Output disertasi diupload ke mana?
+    - disertasi apa perlu dipublikasikan?
+    - Perlukah disertasi dipublikasikan?
+    - Keluaran disertasi kayak gimana?
+    - Output disertasi kayak gimana?
+    - Gimana luaran disertasi?
+    - Gimana output disertasi?
+
+- intent: tanya/formatlaporantugasakhir
+  examples: |
+    - Bagaimana format laporan tugas akhir Universitas Sriwijaya?
+    - Bagaimana format laporan tugas akhir?
+    - Bagaimana format laporan skripsi, tesis, atau disertasi Universitas Sriwijaya?
+    - Bagaimana format laporan skripsi, tesis, atau disertasi?
+    - Bagaimana format laporan tugas akhir berdasarkan luarannya?
+    - Bagaimana format laporan tugas akhir berdasarkan outputnya?
+    - Format laporan tugas akhir Universitas Sriwijaya
+    - Format laporan tugas akhir 
+    - Format laporan skripsi
+    - Format laporan tesis
+    - Format laporan disertasi
+    - Seperti apa format laporan tugas akhir Universitas Sriwijaya?
+    - Seperti apa format laporan tugas akhir?
+    - Gimana format laporan tugas akhir Universitas Sriwijaya?
+    - Gimana format laporan tugas akhir?
+    - Format laporan tugas akhir kayak gimana?
+    - Format laporan tugas akhir luaran minimal
+    - Format laporan tugas akhir luaran prestasi
+    - Format laporan tugas akhir berdasarkan luaran
+    - Format laporan tugas akhir berdasarkan output
+
+- intent: tanya/pembimbing
+  examples: |
+    - Apa sih tugas pembimbing?
+    - Pemimbing itu ngapain aja sih?
+    - Apa perlu ya ada pembimbing?
+    - Seberapa penting sih  pembimbing bagi mahasiswa?
+    - Apa aja sih peran nya pembimbing bagi mahasiswa?
+    - Pembimbing itu ada dari semester berapa sih?
+    - Apakah pembimbing itu telah di tetapkan dari awal kita kuliah?
+    - Siapa sih yang menetapkan pembimbing?
+    - Apa kah kita mahasiswa yang memilih pembimbing?
+    - Hal apa saja yang muncul jika kita mahasiswa tanpa pembimbing?
+
+- intent: tanya/siapapembimbing
+  examples: |
+    - Siapa yang akan menjadi pembimbing tugas akhir?
+
+- intent: tanya/syaratpembimbing
+  examples: |
+    - Apa saja syarat seorang dosen untuk menjadi pembimbing tugas akhir?
+
+- intent: tanya/jumlahpembimbing
+  examples: |
+    - Harus ada berapa sih pembimbing di satu mahasiswa?
+    - Berapa jumlah pembimbing di satu mahasiswa?
+    - Apa kah ada perbedaan jumlah pembimbing dengan tingat pendidikan yang kita ambil?
+    - Apa kah ada jumlah standart pembimbing di setiap tingkatan?
+    - Apa kah sama jumlah pembimbing di setiap tingkatan?
+    - jika mengambil magister berapa pembimbing nya?
+    - jika mengambil doktor berapa pembimbing nya?
+    - jika mengambil dipolma berapa pembimbing nya?
+    - jika mengambil sarjana berapa pembimbing nya?
+    - jika mengambil profesi berapa pembimbing nya?
+
+- intent: tanya/mekanismepembimbing
+  examples: |
+    - Bagaimana sih penetapan dosen pembimbing?
+    - Hal apa saja yang di pertimbangkan dalam penetapan?
+    - Siapa yang mengatur dalam penetapan ini?
+    - Hak siapa yang mengatur penetapan ini?
+    - Penetapan ini di lakukan oleh siapa?
+    - Mengapa penting dilakukan berbagai pertimbangan 
+    - Untuk menetapkan pembimbing hal apa saja yang harus di perhatikan?
+    - Jika ada hal yang harus di perhatikan apa kah itu penting sekali? dalam penetapan ini?
+    - Apa kah ada syarat untuk menjadi pembimbing?
+
+- intent: tanya/pembantu
+  examples: |
+    - Mengapa harus ada pembimbing pembantu?
+    - Pembimbing pembantu peran nya apa aja sih bagi mahasiswa?
+    - Apa kegunaan pembimbing pembantu?
+    - Pembimbing pembantu itu buat apa? 
+    - Apa setiap mahasiswa ada pembimbing pembantu?
+    - Dari mana asal pembiming pembantu?
+    - Apa bisa pembimbing pembantu berasal dari luar universitas mahasiswa tersebut?
+    - Bisakah dosen univeritas luar sebagai pembimbing pembantu?
+    - Bolehkah dosen pembimbing berasal dari universitas lain?
+    - Apakah ada UU yang mengatur tentang pembimbing pembantu?
+
+- intent: tanya/syaratpembantu
+  examples: |
+    - Apa saja syarat menjadi pembimbing pembantu dan atau tim promotor?
+
+- intent: tanya/komisi_penguji
+  examples: |
+    - siapa komisi penguji?
+    - siapa penguji ujian tugas akhir?
+    - siapa yang melakukan penilaian tugas akhir program?
+    - siapa yang menilai tugas akhir?
+    - apa komponen komisi penguji?
+    - apa unsur komisi penguji?
+    - apa tugas komisi penguji?
+    - apa fungsi komisi penguji?
+    - apa tugas ketua penguji?
+    - apa tugas sekretaris penguji?
+    - apa tugas tim pembimbing?
+    - apa tugas penguji?
+    - apa tugas masing-masing komisi penguji?
+    - untuk apa komisi penguji?
+    - komisi penguji kerjanya ngapain?
+    - komisi penguji tugasnya apa?
+    - komisi penguji gunanya apa?
+
+- intent: tanya/mengulangujian
+  examples: |
+    - bagaimana jika tidak lulus ujian akhir?
+    - bagaimana jika tidak lulus ujian proyek akhir?
+    - bagaimana jika tidak lulus ujian skripsi?
+    - bagaimana jika tidak lulus ujian tesis?
+    - bagaimana jika tidak lulus ujian disertasi?
+    - mengulang ujian tugas akhir
+    - mengulang ujian proyek akhir
+    - mengulang ujian skripsi
+    - mengulang ujian tesis
+    - mengulang ujian disertasi
+    - mengulang ujian proyek akhir
+    - batas maksimal ujian tugas akhir
+    - berapa kali bisa mengulang ujian tugas akhir
+    - kapan waktu ujian ulang
+    - kapan waktu mengulang ujian tugas akhir
+    - berapa maksimal mengulang ujian
+    - tanggal mengulang ujian tugas akhir
+    - cara mengajukan permohonan ujian ulang tugas akhir
+
+- intent: tanya/ujian_tugas_akhir_daring
+  examples: |
+    - ujian tugas akhir online
+    - ujian online tugas akhir
+    - ujian tugas akhir daring
+    - ujian tugas akhir dalam jaringan
+    - ujian tugas akhir jarak jauh
+    - bagaimana jika penguji tidak pada dapat hadir?
+    - bagaimana jika mahasiswa tidak dapat hadir saat ujian tugas akhir?
+    - bagaimana jika dosen tidak dapat hadir saat ujian tugas akhir?
+    - bagaimana jika penguji berhalangan hadir saat ujian tugas akhir?
+    - bagaimana jika mahasiswa berhalangan hadir saat ujian tugas akhir?
+    - bagaimana jika penguji sakit saat ujian tugas akhir?
+    - bagaimana jika mahasiwa sakit saat ujian tugas akhir?
+    - bagaimana jika terjadi bencana alam sebelum ujian akhir program?
+    - bagaimana jika ujian akhir batal dilaksanakan?
+    - bagaimana jika ujian akhir tidak dapat dilaksanakan?
+    - bagaimana pelaksanaan ujian akhir di tengah pandemi?
+    - bagaimana pelaksanaan ujian akhir di tengah wabah penyakit?
+    - bagaimana pelaksanaan ujian akhir jika ada kondisi darurat?
+
+- intent: tanya/ketentuan_penguji_program_diploma
+  examples: |
+    - ketentuan penguji program diploma tiga d3
+    - berapa banyak penguji ujian proyek akhir
+    - berapa lama durasi ujian proyek akhir
+    - berapa lama durasi ujian akhir program diploma tiga d3
+    - siapa penguji ujian akhir diploma tiga d3
+    - waktu ujian program diploma tiga d3
+
+- intent: tanya/ketentuan_penguji_program_sarjana
+  examples: |
+    - ketentuan penguji program sarjana s1
+    - ketentuan penguji skripsi
+    - berapa banyak penguji ujian skripsi
+    - berapa lama durasi ujian skripsi
+    - berapa lama durasi ujian akhir program sarjana s1
+    - siapa penguji ujian akhir program sarjana s1
+    - waktu ujian skripsi
+    - waktu ujian program sarjana s1
+
+- intent: tanya/ketentuan_penguji_program_magister
+  examples: |
+    - ketentuan penguji program magister s2
+    - berapa banyak penguji ujian tesis
+    - berapa lama durasi ujian tesis
+    - berapa lama durasi ujian akhir program magister s2
+    - siapa penguji ujian akhir program magister s2
+    - waktu ujian tesis
+    - waktu ujian program magister s2
+
+- intent: tanya/ketentuan_penguji_program_doktor
+  examples: |
+    - ketentuan penguji program doktor s3
+    - berapa banyak penguji ujian disertasi
+    - berapa lama durasi ujian disertasi
+    - berapa lama durasi ujian akhir program doktor s3
+    - siapa penguji ujian akhir program doktor s3
+    - waktu ujian disertasi
+    - waktu ujian program doktor s3
+
+- intent: tanya/ketentuan_penguji_program_profesi
+  examples: |
+    - ketentuan penguji program profesi
+    - berapa lama durasi ujian akhir program profesi
+    - siapa penguji ujian akhir program profesi
+    - waktu ujian program profesi
+    - ketentuan penguji program spesialis
+    - berapa lama durasi ujian akhir program spesialis
+    - siapa penguji ujian akhir program spesialis
+    - waktu ujian program spesialis
+    - ketentuan penguji program subspesialis
+    - berapa lama durasi ujian akhir program subspesialis
+    - siapa penguji ujian akhir program subspesialis
+    - waktu ujian program subspesialis
+
+- intent: tanya/penilaian_tugas_akhir
+  examples: |
+    - Bagaimana ketentuan penilaian tugas akhir?
+    - Seperti apa penilaian tugas akhir?
+
+- intent: tanya/kegiatan_tugas_akhir
+  examples: |
+    - Kegiatan apa yang bisa dilakukan selama proses penyelesaian tugas akhir?
+    - Apa yang dapat dilakukan dalam penyelesaian tugas akhir?
+
+- intent: tanya/bukan_kegiatan_tugas_akhir
+  examples: |
+    - Kegiatan apa yang tidak bisa dilakukan selama proses penyelesaian tugas akhir?
+    - Apa yang tidak dapat dilakukan dalam penyelesaian tugas akhir?
+
+- intent: tanya/saran_dan_umpan
+  examples: |
+    - Siapa yang memberikan saran kepada mahasiswa?
+    - Siapa yang memberikan umpan balik kepada mahasiswa?
+    - Mahasiswa mendapatkan saran dari siapa?
+    - Darimana mahasiswa mendapat saran dan umpan balik?
+
+- intent: tanya/ketentuan_ujian_tugas_akhir
+  examples: |
+    - Bagaimana ketentuan ujian tugas akhir?
+    - Apa ketentuan ujian tugas akhir?
+
+
+- intent: tanya/masapembimbing
+  examples: |
+    - Berapa masa pembimbing Proyek Akhir Diploma?
+    - Berapa masa pembimbing Skripsi program Sarjana?
+    - Berapa masa pembimbing Tesis program Pascasarjana?
+    - Berapa masa pembimbing Disertasi program Doktor?
+    - Apakah bisa masa pembimbing di perpanjang?
+    - Kapan bisa mengambil Proyek Akhir Diploma?
+    - Kapan bisa mengambil Skripsi program Sarjana?
+    - Kapan bisa mengambil Tesis program Pascasarjana?
+    - Kapan bisa mengambil Disertasi program Doktor?
+    - Berapa masa pembimbing program Spesialis dan Subspesialis?
+    - Berapa masa pembimbing program Profesi?
+    - Berapa batas maksimal masa pembimbing Proyek Akhir Diploma?
+    - Berapa batas maksimal masa pembimbing Skripsi program Sarjana?
+    - Berapa batas maksimal masa pembimbing Tesis program Pascasarjana?
+    - Berapa batas maksimal masa pembimbing Disertasi program Doktor?
+    - Berapa batas maksimal masa pembimbing program Spesialis dan Subspesialis?
+    - Berapa batas maksimal masa pembimbing program Profesi?
+
+- intent: tanya/prosesmasapembimbing
+  examples: |
+    - Apakah bisa melakukan pergantian pembimbing?
+    - Siapa yang melakukan pergantian pembimbing?
+    - Apakah bisa pembimbing memberhentikan layanan bimbingan?
+    - Apa saja syarat untuk melakukan perpanjangan masa pembimbing?
+    - Berapa lama proses masa perpanjangan masa bimbingan?
+    - Berapa lama proses pergantian pembimbingan jika adanya pergantian pembimbing?
+
+- intent: tanya/jumlah_mengulang_ujian
+  examples: |
+    -  Berapa kali mahasiswa dapat mengulang ujian?
+
+- intent: tanya/ketentuan_pembimbing
+  examples: |
+    - Apa ketentuan yang diberlakukan dalam pembimbingan proyek akhir?
+    - Ketentuan dalam proses pembimbingan proyek akhir?
+    - Ketentuan dalam proses pembimbingan tugas akhir?
+    - Ketentuan dalam proses pembimbingan skripsi?
+    - Ketetapan dalam proses pembimbingan proyek akhir?
+    - Ketetapan dalam proses pembimbingan tugas akhir?
+    - Ketetapan dalam proses pembimbingan skripsi?
+    - Aturan dalam proses pembimbingan proyek akhir?
+    - Aturan dalam proses pembimbingan tugas akhir?
+    - Aturan dalam proses pembimbingan skripsi?
+
+- intent: tanya/perpanjangan
+  examples: |
+    - Apa proses yang diperlukan mahasiswa untuk mengajukan permohonan perpanjangan masa pembimbingan Tugas Akhir?
+    - Apa yang perlu dilakukan untuk mengajukan permohonan perpanjangan masa pembimbingan Tugas Akhir?
+    - Apa yang perlu dilakukan apabila masa pembimbingan Tugas Akhir tidak cukup?
+    - Bagaimana prosedur perpanjangan masa pembimbingan?
+    - Cara mengajukan perpanjangan masa pembimbingan Tugas Akhir?
+    - Cara mengajukan perpanjangan masa pembimbingan Proyek Akhir?
+    - Cara mengajukan perpanjangan masa pembimbingan Skripsi?
+    - Cara memperpanjang masa pembimbingan Tugas Akhir?
+    - Cara memperpanjang masa pembimbingan Proyek Akhir?
+    - Cara memperpanjang masa pembimbingan Skripsi?
+
+- intent: tanya/pergantian
+  examples: |
+    - Apa saja proses yang diperlukan mahasiswa untuk mengajukan permohonan pergantian pembimbing/promotor?
+    - Apa yang perlu dilakukan untuk mengajukan permohonan penggantian pembimbing Tugas Akhir?
+    - Apa yang perlu dilakukan apabila pembimbing Tugas Akhir tidak membantu?
+    - Bagaimana prosedur penggantian Pembimbing?
+    - Cara mengajukan penggantian pembimbing Tugas Akhir?
+    - Cara mengajukan penggantian pembimbing Proyek Akhir?
+    - Cara mengajukan penggantian pembimbing Skripsi?
+    - Cara mengganti pembimbing Tugas Akhir?
+    - Cara mengganti pembimbing Proyek Akhir?
+    - Cara mengganti pembimbing Skripsi?
+
+- intent: tanya/penghentian
+  examples: |
+    - Apa saja proses yang diperlukan dosen pembimbing untuk mengajukan permohonan pemberhentian layanan bimbingan terhadap mahasiswa tertentu?
+    - Apa saja proses yang diperlukan promotor untuk mengajukan permohonan pemberhentian layanan bimbingan terhadap mahasiswa tertentu?
+    - Apa yang perlu dilakukan untuk mengajukan permohonan pemberhentian layanan bimbingan terhadap mahasiswa tertentu?
+    - Bagaimana menghentikan layanan bimbingan terhadap mahasiswa tertentu?
+    - Cara mengajukan permohonan pemberhentian layanan bimbingan Tugas Akhir?
+    - Cara mengajukan permohonan pemberhentian layanan bimbingan  Proyek Akhir?
+    - Cara mengajukan permohonan pemberhentian layanan bimbingan  Skripsi?
+    - Cara memberhentikan layanan bimbingan Tugas Akhir?
+    - Cara memberhentikan layanan bimbingan Akhir?
+    - Cara memberhentikan layanan bimbingan Skripsi?
+
+- intent: tanya/prosedur
+  examples: |
+    - Apa saja prosedur penguji dan durasi pada ujian Proyek Akhir/Skripsi/Tesis/Disertasi?
+    - Bagaimana prosedur dalam ujian Proyek Akhir/Skripsi/Tesis/Disertasi?
+    - Penguji saat ujian Proyek Akhir/Skripsi/Tesis/Disertasi?
+    - Durasi ujian Proyek Akhir/Skripsi/Tesis/Disertasi?
+    - Ketentuan saat ujian Proyek Akhir/Skripsi/Tesis/Disertasi?
+    - prosedur ujian Proyek Akhir untuk program diploma tiga?
+    - prosedur ujian Proyek Akhir untuk program sarjana (S1)?
+    - prosedur ujian Proyek Akhir untuk program magister (s2)?
+    - prosedur ujian Proyek Akhir untuk program Doktor (s3)?
+    - prosedur ujian Proyek Akhir untuk program profesi, spesialis, dan subspesialis?
+  

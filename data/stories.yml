@@ -1,0 +1,22 @@
+version: "2.0"
+
+stories:
+
+- story: penjelasan
+  steps:
+  - intent: jelaskan
+  - action: utter_tanya/tugasakhir
+  - action: utter_tanya/alasantugasakhir
+
+- story: awal
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_iamabot
+  - action: utter_tanyanama
+  - intent: jawabnama
+    entities:
+    - nama
+  - action: action_simpan_nama
+  - action: action_ambil_nama
+

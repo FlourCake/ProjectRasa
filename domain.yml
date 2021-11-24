@@ -1,0 +1,258 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- jelaskan:
+    use_entities: true
+- tanya:
+    use_entities: true
+- jawabnama:
+    use_entities: true
+- test:
+    use_entities: true
+entities:
+- nama
+slots:
+  nama:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+responses:
+  utter_greet:
+  - text: Salam
+  utter_iamabot:
+  - text: Aku adalah bot, dibuat menggunakan Rasa.
+  utter_tanyanama:
+  - text: Siapa nama anda?
+  utter_jawabnama:
+  - text: Baiklah {nama}, ada yang bisa dibantu?
+  utter_tanya/tugasakhir:
+  - text: Mahasiswa program diploma harus mengerjakan Tugas Akhir di akhir program
+  utter_tanya/alasantugasakhir:
+  - text: |-
+      1. Bentuk pembelajaran berupa pengabdian kepada masyarakat: seperti kuliah kerja nyata (KKN) atau kuliah kerja nyata tematik (KKN-Tematik) atau bentuk lain yang ditetapkan dalam kurikulum
+       2. bentuk pembelajaran yang memberikan pengalaman kerja: seperti Praktik lapangan (PL)/praktik kerja lapangan (PKL), magang atau magang industri, kegiatan/proyek kemanusiaan, asistensi mengajar di satuan pendidikan, dan bentuk lain yang ditetapkan dalam kurikulum program studi
+       3. bentuk pembelajaran berupa penelitian, perancangan, atau pengembangan yang dilaporkan dalam bentuk skripsi.
+  utter_tanya/magang:
+  - text: Pelaksanaan KKN, KKN-Tematik, praktik lapang/kerja praktik, atau magang dapat dilakukan mahasiswa program sarjana sesuai program yang tersedia atau sesuai kebutuhan dengan persetujuan dosen PA.
+  utter_tanya/lamamagang:
+  - text: Pelaksanaan bentuk pembelajaran pengabdian kepada masyarakat dalam kegiatan KKN reguler dilaksanakan maksimal 1,5 (satu setengah) bulan, sedangkan KKN Tematik dilaksanakan selama 1 (satu) bulan.
+  utter_tanya/kkntematik:
+  - text: KKN Tematik dilaksanakan di desa binaan Universitas Sriwijaya atau di tempat lain yang ditetapkan.
+  utter_tanya/skskm:
+  - text: |-
+      Bobot sks ditentukan berdasarkan :
+       1. bobot capaian pembelajaran yang akan diraih dari kegiatan pembelajaran
+       2. durasi (lama waktu) pelaksanaan kegiatan pembelajaran
+       Perhitungan sks berdasarkan waktu/lama pelaksanaan adalah:
+       1. Kegiatan belajar 170 menit/sks/minggu dan dilaksanakan minimal 16 minggu
+       2. Kegiatan belajar 40 jam/minggu dihitung sebagai 1 (satu) sks
+       Bobot sks kegiatan pembelajaran yang dilaksanakan secara terintegrasi atau dalam rangka implementasi Kampus Merdeka maksimum 20 (dua puluh) sks/semester dan maksimal dilaksanakan selama 2 (dua) semester.
+  utter_tanya/tugasakhirmagister:
+  - text: Kegiatan akademik pada akhir program magister berupa penelitian, perancangan, atau pengembangan dilaporkan dalam bentuk tesis.
+  utter_tanya/tugasakhirdoktor:
+  - text: Kegiatan akademik pada akhir program doktor berupa penelitian, perancangan, atau pengembangan dilaporkan dalam bentuk disertasi.
+  utter_tanya/luaranskripsi:
+  - text: |-
+      Skripsi harus menghasilkan luaran yang ditentukan minimal sesuai ketentuan pada Standar Nasional Pendidikan Tinggi. Selain luaran minimal yang wajib dipenuhi, Universitas Sriwijaya juga menetapkan luaran prestasi. Luaran minimal dan luaran prestasi skripsi sebagai berikut:
+       
+      Luaran Minimal:
+      Diunggah pada laman Universitas Sriwijaya sesuai ketentuan.
+       
+      Luaran Prestasi:
+      mampu menyelesaikan studi maksimum 8 (delapan) semester dan mempublikasikan minimal 1 (satu) artikel ilmiah pada:
+      a. Jurnal setara SINTA 4, atau
+      b. prosiding internasional bereputasi, atau
+      c. jurnal internasional bereputasi
+       
+      catatan: Jurnal ilmiah bereputasi adalah jurnal yang terindeks oleh lembaga pengindeks yang diakui Pemerintah, seperti Scopus, Thomson Reuters, atau Web of Science.
+  utter_tanya/luarantesis:
+  - text: |-
+      Tesis harus menghasilkan luaran yang ditentukan minimal sesuai ketentuan pada Standar Nasional Pendidikan Tinggi. Selain luaran minimal yang wajib dipenuhi, Universitas Sriwijaya juga menetapkan luaran prestasi. Luaran minimal dan luaran prestasi tesis sebagai berikut:
+       
+      Luaran Minimal:
+      Abstrak tesis diunggah di laman Universitas Sriwijaya dan minimal 1 (satu) artikel ilmiah pada Jurnal Internasional bereputasi (minimal status diterima atau accepted) atau 1 (satu) artikel ilmiah yang dipublikasikan (published) pada Jurnal Ilmiah Nasional terakreditasi setara SINTA 4.
+       
+      Luaran Prestasi:
+      mampu menyelesaikan program belajarnya dalam maksimum 4 (empat) semester, dan mempublikasikan artikel ilmiah (published) dengan rincian sebagai berikut:
+      a. 2 (dua) artikel pada jurnal internasional setara minimal Q4, atau
+      b. 1 (satu) artikel pada jurnal internasional setara minimal Q4 dan 1 (satu) artikel pada prosiding internasional yang diterbitkan oleh penerbit bereputasi; atau
+      c. 1 (satu) artikel pada jurnal internasional setara minimal Q4 dan 1 (satu) artikel pada jurnal nasional terakreditasi minimal setara SINTA 4
+       
+      catatan: Jurnal ilmiah bereputasi adalah jurnal yang terindeks oleh lembaga pengindeks yang diakui Pemerintah, seperti Scopus, Thomson Reuters, atau Web of Science.
+  utter_tanya/luarandisertasi:
+  - text: |-
+      Disertasi harus menghasilkan luaran yang ditentukan minimal sesuai ketentuan pada Standar Nasional Pendidikan Tinggi. Selain luaran minimal yang wajib dipenuhi, Universitas Sriwijaya juga menetapkan luaran prestasi. Luaran minimal dan luaran prestasi disertasi sebagai berikut:
+       
+      Luaran Minimal:
+      Abstrak disertasi diunggah di laman Universitas Sriwijaya dan minimal 1 (satu) artikel ilmiah yang dipublikasikan (published) pada jurnal ilmiah internasional setara Q3.
+       
+      Luaran Prestasi:
+      mampu menyelesaikan program belajarnya dalam maksimum 6 (enam) semester dan mempublikasikan artikel ilmiah (published) dengan ketentuan sebagai berikut:
+      a. minimal 3 (tiga) artikel ilmiah yang dipublikasi dengan rincian 1 (satu) artikel ilmiah pada jurnal internasional setara SINTA 3 dan 1 (satu) artikel pada jurnal internasional setara minimal Q3, dan 1 (satu) artikel pada prosiding internasional yang diterbitkan oleh penerbit bereputasi, atau
+      b. 2 (dua) artikel ilmiah pada jurnal internasional setara minimum Q2.
+       
+      catatan: Jurnal ilmiah bereputasi adalah jurnal yang terindeks oleh lembaga pengindeks yang diakui Pemerintah, seperti Scopus, Thomson Reuters, atau Web of Science.
+  utter_tanya/formatlaporantugasakhir:
+  - text: |-
+      Skripsi, tesis, atau disertasi dengan luaran minimal dilaporkan dengan format sesuai panduan/pedoman yang berlaku.
+       Skripsi, tesis dan disertasi dengan luaran prestasi dilaporkan dengan format:
+       a. Sampul, judul, lembar pengesahan, Pernyataan Integritas, dan Kata Pengantar
+       b. Bab 1: Pendahuluan
+       c. Bab 2: Artikel ilmiah yang telah dipublikasi
+       d. Bab 3: Pembahasan hasil riset
+       e. Bab 4: Kesimpulan dan Saran
+  utter_tanya/pembimbing:
+  - text: |-
+      Dalam menyelesaikan pendidikan, khususnya dalam penyusunan tugas akhir, mahasiswa dibimbing oleh pembimbing yang ditetapkan oleh Fakultas/Program atas usulan jurusan/bagian/program studi. Secara umum tugas pembimbing skripsi/tesis dan tim promotor disertasi adalah sebagai berikut:
+       1. Membantu dan memfasilitasi mahasiswa dalam merumuskan topik tugas akhir.
+       2. Membimbing mahasiswa menyusun rencana pelaksanaan tugas akhir berupa proposal.
+       3. Mengarahkan dan memantau secara langsung mahasiswa dalam mempersiapkan dan melaksanakan kegiatan tugas akhir, serta dalam menganalisis data dan informasi yang diperolah dari kegiatan tugas akhir.
+       4. Membimbing mahasiswa menyusun, mempresentasikan, dan mempublikasikan tugas akhir dalam bentuk karya ilmiah. Pembimbing utama dan ketua tim prom 
+       jika tidak ada pembimbing maka mahasiswa akan mengalami kesulitan dalam kuliah maupun mengerjakan tugas akhir
+  utter_tanya/siapapembimbing:
+  - text: Pembimbing utama dan ketua tim promotor mahasiswa Universitas Sriwijaya adalah dosen tetap Universitas Sriwijaya. Dosen Universitas Sriwijaya yang menjadi pengundang/perekomendasi mahasiswa program doktor dapat diproiritaskan untuk menjadi Promotor atau kopromotor apabila bidang keilmuannya sesuai dengan topik disertasi.
+  utter_tanya/syaratpembimbing:
+  - text: 'Syarat untuk menjadi pembimbing tugas akhir mahasiswa Universitas Sriwijaya ada pada surat Keputusan Menteri Pendayagunaan Aparatur Negara dan Reformasi Birokrasi Nomor: 46 tahun 2013 dan Standar Pendidikan Universitas Sriwijaya.'
+  utter_tanya/jumlahpembimbing:
+  - text: |-
+      1. Diploma Tiga satu orang dosen 
+      2, Sarjana satu orang dosen dan jika diperlukan, dapat dibantu oleh satu orang dosen pembimbing pembantu 
+      3. Profesi dan Spesialis ditentukan oleh masing-masing asosiasi profesi atau ketentuan kolegium pendidikan dokter spesialis 
+      4. Magister dua orang pembimbing 
+      5. Doktor satu orang promotor yang dibantu sebanyak-banyaknya oleh dua orang kopromotor yang dapat berasal dari perguruan tinggi Nasional atau Internasional di luar Universitas Sriwijaya, dan atau praktisi/pakar yang memenuhi kualifikasi sesuai ketentuan peraturan perundang-undangan
+  utter_tanya/mekanismepembimbing:
+  - text: |-
+      1. kesesuaian bidang ilmu pembimbing/tim promotor dengan topik tugas akhir/skripsi/tesis/disertasi
+       2. pemerataan beban dosen program studi dalam membimbing tugas akhir/skripsi/tesis/disertasi
+       3. pemenuhan persyaratan kualifikasi akademik dan jabatan fungsional dosen sebagai pembimbing tugas akhir/skripsi/tesis/disertasi sesuai peraturan perundang-undangan.
+  utter_tanya/pembantu:
+  - text: Pembimbing pembantu dan atau anggota tim promotor dapat berasal dari dosen di luar Universitas Sriwijaya, praktisi atau pakar yang memenuhi kualifikasi akademik
+  utter_tanya/syaratpembantu:
+  - text: Calon pembimbing pembantu atau tim promotor harus memenuhi kualifikasi akademik mengacu pada Peraturan Presiden Nomor 8 Tahun 2012 tentang Kerangka Kualifikasi Nasional Indonesia (KKNI), Undang Undang Nomor 12 tahun 2012 tentang Pendidikan Tinggi, dan Peraturan Menteri Pendidikan dan Kebudayaan Nomor 3 Tahun 2020 tentang Standar Nasional Pendidikan Tinggi.
+  utter_tanya/komisi_penguji:
+  - text: |-
+      Penilaian Proyek Akhir, Skripsi, Tesis, dan Disertasi, disebut ujian proyek akhir, skripsi, tesis dan disertasi, dilakukan oleh suatu komisi penguji.
+       Komisi penguji ditetapkan oleh Dekan/Direktur terdiri dari empat unsur:
+       1. Ketua : Dosen yang ditugaskan memimpin Ujian
+       2. Sekretaris : Seketaris jurusan atau dosen yg ditugaskan.
+       3. Pendamping (Pembela) : Pembimbing/Promotor dan Kopromotor.
+       4. Penguji : sesuai ketentuan pada masing-masing program
+       Komisi penguji mempunyai keahlian pada bidang yang sesuai dengan rumpun ilmu bidang kajian yang akan diujikan. Fungsi dan tugas masing-masing komponen komisi penguji adalah:
+       1. Ketua penguji (dosen yang ditugaskan memimpin Ujian dan bukan pembimbing/promotor) bertugas mengatur proses ujian dan pembagian tugas penguji. Ketua penguji wajib melaksanakan fungsi sebagai pengontrol proses ujian tidak keluar dari konteks materi yang di uji.
+       2. Sekretaris penguji (seketaris jurusan atau dosen yang ditugaskan bukan pembimbing/kopromotor) berfungsi memastikan kelengkapan administrasi termasuk pencatatan Berita Acara Ujian terpenuhi, serta membantu ketua penguji dalam pembagian waktu menguji dilakukan secara proporsional untuk semua tim penguji.
+       3. Tim pembimbing bertugas sebagai Pendamping/Pembela dan tidak menguji. Pembimbing bertugas mengawasi arah materi ujian, tanggapan, penjelasan, dan jawaban mahasiswa bimbingannya, memantau kesesuaian materi yang diujikan dengan materi yang disajikan oleh mahasiswa bimbingannya, serta memastikan ujian dilaksanakan sungguh-sungguh dan mengikuti prosedur yang ditetapkan. Pembimbing wajib mengintrupsi pengujian yang keluar konteks dan tendensius.
+       4. Penguji (dosen bukan pembimbing/promotor dan bukan Ketua atau Sekretaris komisi penguji) bertugas sebagai penguji dengan menanyakan hal-hal yang berkaitan dengan materi proyek akhir, skripsi, tesis, dan disertasi yang diuji serta pertanyaan lain yang relevan dengan kompetensi keilmuan sesuai dengan jenjang studi mahasiswa dan tidak boleh memberikan pengujian di luar konteks dan atau di luar waktu Ujian. Penguji tidak boleh masuk ke wilayah kewenangan pembimbing/promotor seperti mengubah konteks materi yang diuji, mengubah judul dan isi penelitian yang bukan kewenangan penguji. Jika ada catatan/masukan/hal yang penting dan mendasar dari hasil ujian, penguji dapat memberikan saran yang diserahkan ke pembimbing/promotor.
+  utter_tanya/mengulangujian:
+  - text: Pada ujian proyek akhir, skripsi, tesis atau disertasi, mahasiswa yang dinyatakan tidak lulus dapat mengulang ujiannya. Mahasiswa diberi kesempatan untuk mengulang ujian maksimal 2 (dua) kali. Jarak waktu antara setiap ujian yang diulang paling sedikit satu minggu hari kalender. Tata cara permohonan ujian ulang ditetapkan oleh masing-masing fakultas atau program pascasarjana untuk prodi multidisiplin.
+  utter_tanya/ujian_tugas_akhir_daring:
+  - text: |-
+      Pada kondisi khusus, ujian akhir program dapat dilaksanakan dengan memanfaatkan teknologi informasi dan telekomunikasi (jarak jauh) atas izin Dekan/Direktur Program. Tata cara pelaksanaan ujian jarak jauh ini ditetapkan oleh Fakultas/Program Pascasarjana dengan ketentuan pokok sebagai berikut:
+       1. Kondisi khusus adalah kondisi ketika baik mahasiswa dan satu orang, sebagian, atau seluruh komisi penguji tidak dapat berada pada lokasi yang sama pada waktu bersamaan akibat kendala bencana alam dan atau kondisi darurat lainnya.
+       2. Ujian dilaksanakan pada hari dan jam kerja yang berlaku di Universitas Sriwijaya.
+       3. Durasi ujian tetap mengikuti ketentuan yang berlaku
+       4. Seluruh ketentuan akademik ujian mengikuti ketentuan yang berlaku untuk ujian proyek akhir, skripsi, tesis atau disertasi.
+       5. Seluruh persyaratan administrasi ujian dipenuhi sesuai ketentuan yang ditetapkan Fakultas/Program Pascasarjana.
+  utter_tanya/ketentuan_penguji_program_diploma:
+  - text: |-
+      Untuk program diploma tiga, penguji merupakan 1 (satu) orang dosen bukan pembimbing dari prodi yang sama.
+       Durasi ujian maksimum 30 (tiga puluh) menit.
+  utter_tanya/ketentuan_penguji_program_sarjana:
+  - text: |-
+      Untuk program sarjana, penguji merupakan 1 (satu) orang dosen bukan pembimbing dari prodi yang sama. Jika diperlukan, dapat ditambahkan 1 (satu) orang dosen lagi yang bukan pembimbing dari prodi yang sama.
+       Durasi ujian maksimum 30 (tiga puluh) menit.
+  utter_tanya/ketentuan_penguji_program_magister:
+  - text: |-
+      Untuk program magister, penguji merupakan 2 (dua) orang dosen bukan pembimbing, dapat berasal dari bidang multidisplin.
+       Durasi ujian maksimum 60 (enam puluh) menit.
+  utter_tanya/ketentuan_penguji_program_doktor:
+  - text: |-
+      Untuk program doktor, penguji merupakan 1 (satu) orang dosen bukan promotor yang berasal dari dosen Multidisiplin, Interdisiplin atau Intradisiplin dan 1 (satu) penguji eksternal berasal dari luar Universitas Sriwijaya. Jika diperlukan, dapat ditambahkan 1 (satu) orang lagi dosen yang bukan tim promotor. 
+      Catatan:
+      - Ujian Disertasi dapat dihadiri oleh unsur Pimpinan Universitas, Fakultas, Pascasarjana
+       - Jika diperlukan dan atas pertimbangan Tim Promotor, maka Ujian dapat dihadiri oleh keluarga promovendus, dan mitra kerja Universitas Sriwijaya.
+       Durasi ujian Minimal 60 (enam puluh) menit dan Maksimum 180 (seratus delapan puluh) menit.
+       Catatan:
+       Ketua Komisi Penguji dapat dipimpin oleh: Rektor, Dekan, Direktur Program Pascasarjana, atau Pejabat lain/Dosen yang ditugaskan oleh Rektor untuk itu.
+  utter_tanya/ketentuan_penguji_program_profesi:
+  - text: Untuk program profesi, program spesialis dan program subspesalis. Penguji dan durasi ujian diatur sesuai ketentuan ujian profesi masing-masing
+  utter_tanya/jumlah_mengulang_ujian:
+  - text: Mahasiswa diberi kesempatan untuk mengulang ujian maksimal 2 (dua) kali.
+  utter_ask_rephrase:
+  - text: Maaf, mohon diulangi pertanyaannya
+  utter_tanya/penilaian_tugas_akhir:
+  - text: Penilaian tugas akhir dilaksanakan sesuai ketentuan pada Tabel 3.4.
+  utter_tanya/kegiatan_tugas_akhir:
+  - text: Dalam proses penyelesaian tugas akhir program dapat dilakukan tahap-tahap seminar proposal, seminar kemajuan, dan seminar hasil penelitian sesuai program yang diikuti.
+  utter_tanya/bukan_kegiatan_tugas_akhir:
+  - text: Dalam proses penyelesaian tugas akhir program tidak dilakukan ujian dan penilaian.
+  utter_tanya/saran_dan_umpan:
+  - text: Mahasiswa mendapat saran dan umpan balik dari dosen pembimbing dan dosen pembahas yang bukan pembimbingnya, serta dari mahasiswa lain jika dihadirkan, untuk memperbaiki, memperkaya, serta meningkatkan kualitas tugas akhir atau publikasinya.
+  utter_tanya/ketentuan_ujian_tugas_akhir:
+  - text: |-
+      Ujian tugas akhir program berupa ujian proyek akhir, skripsi, tesis, dan disertasi dilaksanakan dengan ketentuan sebagai berikut.:
+       1. Ujian akhir program merupakan penilaian komprehensif tentang pencapaian kompetensi lulusan oleh mahasiswa yang diuji dan dihadiri oleh semua komisi penguji.
+       2. Ujian dapat dilakukan terpisah apabila salah satu atau sebagian tim penguji berhalangan secara mendadak untuk menguji pada waktu yang ditentukan. Ujian yang dilakukan terpisah dapat dilakukan maksimum 2 (dua) kali termasuk ujian yang ditetapkan sebelumnya. Setiap kali ujian dihadiri oleh minimal salah satu pembimbing atau tim promotor.
+       3. Substansi soal/pertanyaan dan pelaksanaan ujian akhir program tidak boleh berupa pertanyaan ujian atau suasana ujian yang bersifat diskriminatif, Intoleransi, pelecehan, dan atau perundungan (bullying).
+       4. Ujian akhir program diselenggarakan setelah mahasiswa melalui proses pembimbingan tugas akhir oleh dosen pembimbing atau promotor.
+      5. Ujian akhir program dilaksanakan oleh program studi dan komisi penguji yang ditetapkan dengan surat keputusan Dekan/Direktur Program.
+       6. Ujian akhir program subspesialis dan program doktor wajib menyertakan penilai eksternal dari perguruan tinggi/instansi di luar Universitas Sriwijaya.
+       7. Persyaratan kualifikasi akademik dan jabatan akademik komisi penguji ditetapkan sesuai Peraturan Menteri Penertiban Aparatur Negara Nomor 46 Tahun 2013, Peraturan Presiden Nomor 8 Tahun 2012 tentang Kerangka Kualifikasi Nasional Indonesia, dan Permendikbud Nomor 3 Tahun 2020 tentang Standar Nasional Pendidikan Tinggi.
+  utter_tanya/masapembimbing:
+  - text: Setiap tugas akhir projek, skripsi, tesis, disertasi, spesialis, subspesialis, dan profesi memiliki masa pembimbing masing-masing dengan ketentuan yang berlaku.
+  utter_tanya/prosesmasapembimbing:
+  - text: |-
+      Pada masa pembimbing akan adanya kendala baik dari mahasiswa maupun dari pembimbing sehingga perlu penyelesain dengan baik di kedua belah pihak, dengan ketentuan sebagai berikut:
+       1. Jika Masa bimbingan Tugas Akhir (Proyek Akhir, Skripsi, Tesis, dan Desertasi) perlu diperpanjang satu semester, dosen pembimbing/promotor mengusulkan perpanjangan masa bimbingan tugas akhir kepada Dekan Fakultas/Direktur Pascasarjana melalui koordinator Program Studi. Usulan perpanjangan disertai dengan keterangan: a)alasan perpanjangan; dan b) rencana tahap dan jadwal waktu penyelesaian Skripsi, Tesis, dan Desertasi.
+       2. Dalam proses pembimbingan, mahasiswa dapat mengusulkan pergantian pembimbing/promotor dengan permohonan tertulis dari mahasiswa setelah didahului pembicaraan antara koprodi, mahasiswa dan pembimbing/promotor. Usulan pergantian pembimbing/promotor disampaikan mahasiswa kepada koordinator program studi. Koordinator program studi meneruskan permohonan ini kepada Dekan/Direktur Pascasarjana.
+       3. Dalam proses pembimbingan, dosen pembimbing/promotor dapat mengusulkan penghentian layanan bimbingan kepada mahasiswa tertentu dengan permohonan tertulis dari dosen setelah didahului pembicaraan antara koprodi, mahasiswa dan pembimbing/promotor. Usulan penghentian layanan bimbingan disampaikan ke koordinator program studi. Koordinator program studi meneruskan permohonan ini kepada Dekan/Direktur Pascasarjana.
+       4. Apabila masa pembimbingan Tugas Akhir termasuk Proyek Akhir/Skripsi/Tesis/Disertasi telah berakhir dan masa studi yang tersisa tidak memadai sesuai ketentuan pada Tabel 3.1 untuk menyelesaikan studi atau Proyek Akhir/Skripsi/Tesis/Disertasi, mahasiswa dapat mengajukan permohonan perpanjangan masa studi kepada Rektor disertai dengan keterangan: a) alasan perpanjangan; dan b) rencana tahap dan jadwal waktu penyelesaian Skripsi, Tesis, dan Desertasi. Permohonan harus atas pengetahuan dan jaminan pembimbing/promotornya.
+       5. Mahasiswa menyampaikan permohonan perpanjangan masa penyelesaian tugas akhirnya melalui koordinator program studi. Selanjutnya koordinator program studi meneruskan permohonan ini kepada Dekan/Direktur Pascasarjana, untuk diteruskan kepada Rektor.
+       6. Pemberian izin perpanjangan masa penyelesaian studi dan atau Proyek Akhir /Skripsi/Tesis/Disertasi tidak boleh melebihi ketentuan masa studi yang telah ditetapkan Peraturan Menteri Pendidikan dan Kebudayaan Nomor 3 Tahun 2020 tentang Standar Nasional Pendidikan Tinggi.
+  utter_tanya/ketentuan_pembimbing:
+  - text: |2-
+       Ketentuan yang telah ditetapkan antara lain:
+       1.  Untuk mengusulkan perpanjangan masa bimbingan tugas akhir, diperlukan keterangan seperti: a) alasan perpanjangan; dan b) rencana tahap dan jadwal waktu penyelesaian Skripsi, Tesis, dan Desertasi.
+       2.  Masa pembimbingan program Spesialis dan Subspesialis ditentukan sesuai dengan ketentuan yang ditetapkan oleh rektor atas usul dekan FK.
+       3.  Masa pembimbingan program Profesi ditentukan sesuai dengan ketentuan yang ditetapkan Rektor atas usul Dekan.
+       4.  Mahasiswa dapat mengusulkan penggantian pembimbing/promotor dengan permohonan tertulis setelah dilakukan diskusi antara koprodi, mahasiswa dan pembimbing/promotor. Usulan akan diajukan kepada koprodi yang kemudian akan diteruskan ke dekan/direktur pasca sarjana.
+       5.  Dosen dapat mengusulkan penghentian layanan bimbingan kepada mahasiswa tertentu dengan permohonan tertulis setelah diskusi antara koprodi, mahasiswa dan pembimbing/promotor. Usulan akan diajukan kepada koprodi yang kemudian akan diteruskan ke dekan/direktur pasca sarjana.
+       6.  Apabila masa pembimbingan Tugas Akhir telah berakhir dan masa studi yang tersisa tidak memadai untuk menyelesaikan studi atau Proyek Akhir/Skripsi/Tesis/Disertasi, mahasiswa dapat mengajukan permohonan perpanjangan masa studi kepada Rektor disertai dengan keterangan: a) alasan perpanjangan; b) rencana tahap dan jadwal waktu penyelesaian Skripsi, Tesis, dan Desertasi; dan c) jaminan dari pembimbing/promotornya.
+       7.  Mahasiswa menyampaikan permohonan perpanjangan masa penyelesaian tugas akhirnya melalui koordinator program studi. Selanjutnya koordinator program studi meneruskan permohonan ini kepada Dekan/Direktur Pascasarjana, untuk diteruskan kepada Rektor.
+       8.  Pemberian izin perpanjangan masa penyelesaian studi dan atau Proyek Akhir/Skripsi/Tesis/Disertasi tidak boleh melebihi ketentuan masa studi yang telah ditetapkan Peraturan Menteri Pendidikan dan Kebudayaan Nomor 3 Tahun 2020 tentang Standar Nasional Pendidikan Tinggi. 
+  utter_tanya/perpanjangan:
+  - text: |
+      Mahasiswa perlu menyampaikan permohonan perpanjangan masa penyelesaian tugas akhir melalui koordinator program studi, dilengkapi dengan keterangan seperti: 
+       1. alasan perpanjangan.
+       2. rencana tahap dan jadwal waktu penyelesaian Skripsi, Tesis, dan Desertasi.
+       3. jaminan dari pembimbing/promotornya. 
+       Permohonan kemudian akan diteruskan oleh koprodi kepada dekan, untuk diteruskan kepada rektor. 
+       Pemberian izin perpanjangan tersebut tidak boleh melebihi ketentuan masa studi yang telah ditetapkan Peraturan Menteri Pendidikan dan Kebudayaan Nomor 3 Tahun 2020 tentang Standar Nasional Pendidikan Tinggi.
+  utter_tanya/pergantian:
+  - text: Setelah dilakukan pembicaraan antara koprodi, mahasiswa, dan pembimbing/promotor, Mahasiswa perlu mengusulkan permohonan tertulis kepada koordinator program studi, yang kemudian akan diteruskan kepada dekan/direktur pasca sarjana.
+  utter_tanya/penggantian:
+  - text: Setelah dilakukan pembicaraan antara koprodi, mahasiswa, dan pembimbing/promotor, Mahasiswa perlu mengusulkan permohonan tertulis kepada koordinator program studi, yang kemudian akan diteruskan kepada dekan/direktur pasca sarjana.
+  utter_tanya/prosedur:
+  - text: |2-
+       Prosedur untuk penguji dan durasi ujian Proyek Akhir antara lain:
+       1.  Program diploma tiga; Durasi maksimum 30 (tiga puluh) menit dengan penguji berupa 1 (satu) orang dosen bukan pembimbing dari prodi yang sama.
+       2.  Program sarjana (S1); Durasi maksimum 30 (tiga puluh) menit dengan penguji berupa 1 (satu) orang dosen bukan pembimbing dari prodi yang sama, atau 2 (dua) orang jika diperlukan.
+       3.  Program magister (S2); Durasi maksimum 60 (enam puluh) menit dengan penguji berupa 2 (dua) orang dosen bukan pembimbing, dapat dari bidang multidisiplin.
+       4.  Program Doktor (S3) - Sistem Ujian; Durasi minimum 30 (tiga puluh) menit dan maksimum 90 (sembilan puluh) menit dengan penguji berupa 1 (satu) orang dosen bukan promotor dari dosen Multidisiplin, Interdisiplin, atau Intradisiplin dan 1 (satu) penguji eksternal dari luar Universitas Sriwijaya.
+       5.  Program profesi, spesialis, dan subspesialis; Durasi dan Penguji diatur sesuai ketentuan ujian profesi masing-masing.
+actions:
+- test_action
+- action_simpan_nama
+- action_ambil_nama
+forms: {}
+e2e_actions: []
